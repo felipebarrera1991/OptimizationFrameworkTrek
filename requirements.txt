@@ -1,0 +1,8 @@
+pulp==2.7.0
+ortools==9.8.*
+numpy==1.26.2
+pandas==2.1.4
+pyomo==6.7.0
+python-constraint==1.4.0
+simanneal==0.5.0
+deap==1.4.1
