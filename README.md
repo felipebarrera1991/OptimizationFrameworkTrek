@@ -21,7 +21,7 @@
 
 3. **Install Required Packages**
     ```bash
-    conda install --file requirements.txt
+    pip install -r requirements.txt
     ```
 
 4. **Verification**
@@ -32,3 +32,42 @@
 
 5. **Start Working**
     You can now start working within the newly created Conda environment for the project.
+
+
+# Installing CBC and GLPK Solvers for Pyomo
+
+## Overview
+CBC (Coin-or Branch and Cut) and GLPK (GNU Linear Programming Kit) are open-source linear programming solvers commonly used with Pyomo. Here's how to install them.
+
+## Installation Steps
+
+### Using Conda
+1. **Open Terminal or Command Prompt**
+   
+2. **Install CBC and GLPK**
+   
+    ```
+    conda install -c conda-forge coincbc glpk
+    ```
+
+3. **Verification**
+   
+    To verify that the solvers have been installed successfully, you can check the list of installed packages:
+   
+    ```
+    conda list
+    ```
+
+4. **Usage with Pyomo**
+   
+    Once installed, you can utilize these solvers with Pyomo by specifying them as the solver in your optimization models.
+
+## Pyomo Configuration
+To use CBC or GLPK as solvers within your Pyomo optimization models, you can specify them during the solver configuration in your Python code.
+
+For CBC:
+
+```python
+from pyomo.environ import SolverFactory
+
+solver = SolverFactory('cbc')
