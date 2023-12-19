@@ -15,22 +15,17 @@
 
 2. **Create a Conda Environment**
     ```bash
-    conda create --name <environment_name> python=3.9
-    conda activate <environment_name>
+    conda env create -f environment.yml
+    conda activate optimization
     ```
 
-3. **Install Required Packages**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **Verification**
+3. **Verification**
     Verify that the environment has been set up correctly:
     ```bash
     conda env list
     ```
 
-5. **Start Working**
+4. **Start Working**
     You can now start working within the newly created Conda environment for the project.
 
 
