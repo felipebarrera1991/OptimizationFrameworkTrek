@@ -1,3 +1,4 @@
+import click
 import random
 
 from deap import base, creator, tools
@@ -68,5 +69,7 @@ def genetic_algorithm_allocation_problem():
     print('Cabins:', best_individual[2])
     print('Total Profit:', -best_individual.fitness.values[0])
 
-if __name__ == "__main__":
+@click.command("genetic_algorithm")
+def cli_genetic_algorithm():
+    print("Run genetic algorithm")
     genetic_algorithm_allocation_problem()

@@ -1,3 +1,4 @@
+import click
 from constraint import Problem
 
 
@@ -41,4 +42,9 @@ def solve_constraint():
         print('No solution found.')
 
 if __name__ == "__main__":
+    solve_constraint()
+
+@click.command("programming_constraint")
+def cli_programming_constraint():
+    print("Run programming constraint")
     solve_constraint()

@@ -1,3 +1,4 @@
+import click
 import random
 
 from simanneal import Annealer
@@ -36,4 +37,9 @@ def simulated_annealing_allocation_problem():
 
 
 if __name__ == "__main__":
+    simulated_annealing_allocation_problem()
+
+@click.command("simulated_annealing")
+def cli_simulated_annealing():
+    print("Run simulated annealing")
     simulated_annealing_allocation_problem()

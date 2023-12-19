@@ -1,3 +1,4 @@
+import click
 from ortools.linear_solver import pywraplp
 
 
@@ -29,6 +30,8 @@ def solve_allocation_problem():
     print('Super Canoes:', super_canoes.solution_value())
     print('Cabins:', cabins.solution_value())
     print('Total Profit:', objective.Value())
-
-if __name__ == "__main__":
+    
+@click.command("ortools_optimization")
+def cli_ortools_optimization():
+    print("Run ortools optimization")
     solve_allocation_problem()

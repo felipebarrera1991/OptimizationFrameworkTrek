@@ -1,7 +1,8 @@
+import click
 from pyomo.environ import *
 
 
-def solve_allocation_problem():
+def solve_allocation_problem_pyomo():
     # Creating the model
     model = ConcreteModel()
 
@@ -32,5 +33,8 @@ def solve_allocation_problem():
     print('Cabins:', round(value(model.x['cabins'])))
     print('Total Profit:', round(value(model.obj)))
 
-if __name__ == "__main__":
-    solve_allocation_problem()
+
+@click.command("pyomo_optimization")
+def cli_pyomo_optimization():
+    print("Run pyomo optimization")
+    solve_allocation_problem_pyomo()

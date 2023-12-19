@@ -1,3 +1,4 @@
+import click
 import random
 
 
@@ -23,6 +24,7 @@ def random_search_allocation_problem(iterations=1000):
     print('Cabins:', best_allocation[2])
     print('Total Profit:', best_profit)
 
-
-if __name__ == "__main__":
+@click.command("random_search")
+def cli_random_search():
+    print("Run random search")
     random_search_allocation_problem()
