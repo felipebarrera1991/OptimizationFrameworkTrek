@@ -1,0 +1,8 @@
+*.ipynb
+*.pyc
+*.csv
+*.xl*
+*.pickle
+*.parquet
+*.p
+*.pkl
