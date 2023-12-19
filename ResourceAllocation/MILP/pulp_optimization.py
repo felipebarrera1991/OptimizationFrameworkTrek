@@ -1,28 +1,28 @@
 from pulp import *
 
-# Criação do problema de maximização
+# Creating the maximization problem
 prob = LpProblem("Maximize_Profit", LpMaximize)
 
-# Variáveis de decisão
-jangadas = LpVariable("Jangadas", lowBound=0, cat='Integer')
-supercanoas = LpVariable("Supercanoas", lowBound=0, cat='Integer')
-arcas = LpVariable("Arcas", lowBound=0, cat='Integer')
+# Decision variables
+rafts = LpVariable("Rafts", lowBound=0, cat='Integer')
+super_canoes = LpVariable("Super Canoes", lowBound=0, cat='Integer')
+cabins = LpVariable("Cabins", lowBound=0, cat='Integer')
 
-# Função objetivo
-prob += 50 * jangadas + 70 * supercanoas + 100 * arcas, "Total_Profit"
+# Objective function
+prob += 50 * rafts + 70 * super_canoes + 100 * cabins, "Total_Profit"
 
-# Restrições
-prob += jangadas <= 4
-prob += supercanoas <= 8
-prob += arcas <= 3
-prob += jangadas + supercanoas + arcas <= 10  # Capitães
-prob += jangadas + 2*supercanoas + 3*arcas <= 18  # Tripulação
+# Constraints
+prob += rafts <= 4
+prob += super_canoes <= 8
+prob += cabins <= 3
+prob += rafts + super_canoes + cabins <= 10  # Captains
+prob += rafts + 2 * super_canoes + 3 * cabins <= 18  # Crew
 
-# Resolvendo o problema
+# Solving the problem
 prob.solve()
 
-# Imprimindo resultados
-print("Jangadas:", value(jangadas))
-print("Supercanoas:", value(supercanoas))
-print("Arcas:", value(arcas))
-print("Lucro Total:", value(prob.objective))
+# Printing results
+print("Rafts:", value(rafts))
+print("Super Canoes:", value(super_canoes))
+print("Cabins:", value(cabins))
+print("Total Profit:", value(prob.objective))

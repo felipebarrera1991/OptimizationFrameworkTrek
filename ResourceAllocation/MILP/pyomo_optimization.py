@@ -1,35 +1,36 @@
 from pyomo.environ import *
 
+
 def solve_allocation_problem():
-    # Criação do modelo
+    # Creating the model
     model = ConcreteModel()
 
-    # Conjunto de barcos
-    barcos = ['jangadas', 'supercanoas', 'arcas']
+    # Set of boats
+    boats = ['rafts', 'super_canoes', 'cabins']
 
-    # Variáveis de decisão
-    model.x = Var(barcos, domain=NonNegativeIntegers)
+    # Decision variables
+    model.x = Var(boats, domain=NonNegativeIntegers)
 
-    # Função objetivo
-    model.obj = Objective(expr=50 * model.x['jangadas'] + 70 * model.x['supercanoas'] + 100 * model.x['arcas'],
+    # Objective function
+    model.obj = Objective(expr=50 * model.x['rafts'] + 70 * model.x['super_canoes'] + 100 * model.x['cabins'],
                           sense=maximize)
 
-    # Restrições
-    model.capitães = Constraint(expr=model.x['jangadas'] + model.x['supercanoas'] + model.x['arcas'] <= 10)
-    model.tripulação = Constraint(expr=model.x['jangadas'] + 2 * model.x['supercanoas'] + 3 * model.x['arcas'] <= 18)
-    model.jangadas_limit = Constraint(expr=model.x['jangadas'] <= 4)
-    model.supercanoas_limit = Constraint(expr=model.x['supercanoas'] <= 8)
-    model.arcas_limit = Constraint(expr=model.x['arcas'] <= 3)
+    # Constraints
+    model.captains = Constraint(expr=model.x['rafts'] + model.x['super_canoes'] + model.x['cabins'] <= 10)
+    model.crew = Constraint(expr=model.x['rafts'] + 2 * model.x['super_canoes'] + 3 * model.x['cabins'] <= 18)
+    model.rafts_limit = Constraint(expr=model.x['rafts'] <= 4)
+    model.super_canoes_limit = Constraint(expr=model.x['super_canoes'] <= 8)
+    model.cabins_limit = Constraint(expr=model.x['cabins'] <= 3)
 
     # Solver
     solver = SolverFactory('glpk')
     results = solver.solve(model)
 
-    # Imprimindo resultados
-    print('Jangadas:', round(value(model.x['jangadas'])))
-    print('Supercanoas:', round(value(model.x['supercanoas'])))
-    print('Arcas:', round(value(model.x['arcas'])))
-    print('Lucro Total:', round(value(model.obj)))
+    # Printing results
+    print('Rafts:', round(value(model.x['rafts'])))
+    print('Super Canoes:', round(value(model.x['super_canoes'])))
+    print('Cabins:', round(value(model.x['cabins'])))
+    print('Total Profit:', round(value(model.obj)))
 
 if __name__ == "__main__":
     solve_allocation_problem()

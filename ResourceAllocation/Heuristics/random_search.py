@@ -1,26 +1,28 @@
 import random
 
+
 def random_search_allocation_problem(iterations=1000):
     best_profit = float('-inf')
     best_allocation = None
 
     for _ in range(iterations):
-        jangadas = random.randint(0, 4)
-        supercanoas = random.randint(0, 8)
-        arcas = random.randint(0, 3)
+        rafts = random.randint(0, 4)
+        super_canoes = random.randint(0, 8)
+        cabins = random.randint(0, 3)
 
-        # Aplicando restrições
-        if jangadas + supercanoas + arcas <= 10 and jangadas + 2 * supercanoas + 3 * arcas <= 18:
-            profit = 50 * jangadas + 70 * supercanoas + 100 * arcas
+        # Applying constraints
+        if rafts + super_canoes + cabins <= 10 and rafts + 2 * super_canoes + 3 * cabins <= 18:
+            profit = 50 * rafts + 70 * super_canoes + 100 * cabins
             if profit > best_profit:
                 best_profit = profit
-                best_allocation = (jangadas, supercanoas, arcas)
+                best_allocation = (rafts, super_canoes, cabins)
 
-    # Imprimindo resultados
-    print('Jangadas:', best_allocation[0])
-    print('Supercanoas:', best_allocation[1])
-    print('Arcas:', best_allocation[2])
-    print('Lucro Total:', best_profit)
+    # Printing results
+    print('Rafts:', best_allocation[0])
+    print('Super Canoes:', best_allocation[1])
+    print('Cabins:', best_allocation[2])
+    print('Total Profit:', best_profit)
+
 
 if __name__ == "__main__":
     random_search_allocation_problem()
