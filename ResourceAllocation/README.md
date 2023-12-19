@@ -8,37 +8,38 @@ Captain Caveman Inc., located in Stone Age, rents out three types of boats for m
 ### Mathematical Formulation:
 
 **Parameters:**
-- \(J\) = Set of rafts
-- \(S\) = Set of super canoes
-- \(A\) = Set of cabins
-- \(P_j\) = Profit per raft
-- \(P_s\) = Profit per super canoe
-- \(P_a\) = Profit per cabin
-- \(C_j\) = Captain capacity per raft
-- \(C_s\) = Captain capacity per super canoe
-- \(C_a\) = Captain capacity per cabin
-- \(T_j\) = Crew per raft
-- \(T_s\) = Crew per super canoe
-- \(T_a\) = Crew per cabin
+- $$\(J\)$$ = Set of rafts
+- $$\(S\)$$ = Set of super canoes
+- $$\(A\)$$ = Set of cabins
+- $$\(P_j\)$$ = Profit per raft
+- $$\(P_s\)$$ = Profit per super canoe
+- $$\(P_a\)$$ = Profit per cabin
+- $$\(C_j\)$$ = Captain capacity per raft
+- $$\(C_s\)$$ = Captain capacity per super canoe
+- $$\(C_a\)$$ = Captain capacity per cabin
+- $$\(T_j\)$$ = Crew per raft
+- $$\(T_s\)$$ = Crew per super canoe
+- $$\(T_a\)$$ = Crew per cabin
 
 **Decision Variables:**
-- \(x_j\) = Quantity of rafts to allocate
-- \(x_s\) = Quantity of super canoes to allocate
-- \(x_a\) = Quantity of cabins to allocate
+- $$\(x_j\)$$ = Quantity of rafts to allocate
+- $$\(x_s\)$$ = Quantity of super canoes to allocate
+- $$\(x_a\)$$ = Quantity of cabins to allocate
 
 **Objective:**
-Maximize the total profit \(L\) represented by the sum of the profit of each type of allocated boat.
-\[ L = P_j \cdot x_j + P_s \cdot x_s + P_a \cdot x_a \]
+Maximize the total profit $$\(L\)$$ represented by the sum of the profit of each type of allocated boat.
+
+$$\[ L = P_j \cdot x_j + P_s \cdot x_s + P_a \cdot x_a \]$$
 
 **Constraints:**
 - Captain capacity:
-\[ C_j \cdot x_j + C_s \cdot x_s + C_a \cdot x_a \leq \text{Total Captain Capacity} \]
+$$\[ C_j \cdot x_j + C_s \cdot x_s + C_a \cdot x_a \leq \text{Total Captain Capacity} \]$$
 - Crew:
-\[ T_j \cdot x_j + T_s \cdot x_s + T_a \cdot x_a \leq \text{Total Crew Capacity} \]
+$$\[ T_j \cdot x_j + T_s \cdot x_s + T_a \cdot x_a \leq \text{Total Crew Capacity} \]$$
 - Maximum quantity constraints for each type of boat:
-\[ x_j \leq \text{Maximum Quantity of Rafts} \]
-\[ x_s \leq \text{Maximum Quantity of Super Canoes} \]
-\[ x_a \leq \text{Maximum Quantity of Cabins} \]
+$$\[ x_j \leq \text{Maximum Quantity of Rafts} \]$$
+$$\[ x_s \leq \text{Maximum Quantity of Super Canoes} \]$$
+$$\[ x_a \leq \text{Maximum Quantity of Cabins} \]$$
 
 This problem aims to allocate rafts, super canoes, and cabins to maximize the total profit while respecting the captain and crew capacities for each type of boat.
 
