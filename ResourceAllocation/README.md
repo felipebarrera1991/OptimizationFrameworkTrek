@@ -8,26 +8,26 @@ Captain Caveman Inc., located in Stone Age, rents out three types of boats for m
 ### Mathematical Formulation:
 
 **Parameters:**
-- $$\(J\)$$ = Set of rafts
-- $$\(S\)$$ = Set of super canoes
-- $$\(A\)$$ = Set of cabins
-- $$\(P_j\)$$ = Profit per raft
-- $$\(P_s\)$$ = Profit per super canoe
-- $$\(P_a\)$$ = Profit per cabin
-- $$\(C_j\)$$ = Captain capacity per raft
-- $$\(C_s\)$$ = Captain capacity per super canoe
-- $$\(C_a\)$$ = Captain capacity per cabin
-- $$\(T_j\)$$ = Crew per raft
-- $$\(T_s\)$$ = Crew per super canoe
-- $$\(T_a\)$$ = Crew per cabin
+- $\(J\)$ = Set of rafts
+- $\(S\)$ = Set of super canoes
+- $\(A\)$ = Set of cabins
+- $\(P_j\)$ = Profit per raft
+- $\(P_s\)$ = Profit per super canoe
+- $\(P_a\)$ = Profit per cabin
+- $\(C_j\)$ = Captain capacity per raft
+- $\(C_s\)$ = Captain capacity per super canoe
+- $\(C_a\)$ = Captain capacity per cabin
+- $\(T_j\)$ = Crew per raft
+- $\(T_s\)$ = Crew per super canoe
+- $\(T_a\)$ = Crew per cabin
 
 **Decision Variables:**
-- $$\(x_j\)$$ = Quantity of rafts to allocate
-- $$\(x_s\)$$ = Quantity of super canoes to allocate
-- $$\(x_a\)$$ = Quantity of cabins to allocate
+- $\(x_j\)$ = Quantity of rafts to allocate
+- $\(x_s\)$ = Quantity of super canoes to allocate
+- $\(x_a\)$ = Quantity of cabins to allocate
 
 **Objective:**
-Maximize the total profit $$\(L\)$$ represented by the sum of the profit of each type of allocated boat.
+Maximize the total profit $\(L\)$ represented by the sum of the profit of each type of allocated boat.
 
 $$\[ L = P_j \cdot x_j + P_s \cdot x_s + P_a \cdot x_a \]$$
 
