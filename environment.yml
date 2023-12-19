@@ -2,10 +2,13 @@ name: optimization
 channels:
   - conda-forge
 dependencies:
+  - click==7.1.*
   - python=3.9.*
   - pip
   - numpy==1.26.2
   - pandas==2.1.4
+  - coincbc==2.10.10
+  - glpk==5.0
   - pip:
     - pulp==2.7.0
     - ortools==9.8.*
