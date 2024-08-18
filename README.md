@@ -30,13 +30,13 @@
 
 5. **Run Optimization**
     ```bash
-    ./run cli_genetic_algorithm
-    ./run cli_random_search
-    ./run cli_simulated_annealing
-    ./run cli_ortools_optimization
-    ./run cli_pulp_optimization
-    ./run cli_pyomo_optimization
-    ./run cli_programming_constraint
+    ./run genetic_algorithm
+    ./run random_search
+    ./run simulated_annealing
+    ./run ortools_optimization
+    ./run pulp_optimization
+    ./run pyomo_optimization
+    ./run programming_constraint
     ```
 
 # Installing CBC and GLPK Solvers for Pyomo
