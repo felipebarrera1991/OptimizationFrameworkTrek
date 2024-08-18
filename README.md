@@ -28,6 +28,16 @@
 4. **Start Working**
     You can now start working within the newly created Conda environment for the project.
 
+5. **Run Optimization**
+    ```bash
+    ./run cli_genetic_algorithm
+    ./run cli_random_search
+    ./run cli_simulated_annealing
+    ./run cli_ortools_optimization
+    ./run cli_pulp_optimization
+    ./run cli_pyomo_optimization
+    ./run cli_programming_constraint
+    ```
 
 # Installing CBC and GLPK Solvers for Pyomo
 
